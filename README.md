@@ -54,6 +54,6 @@ A short demo of the [Media Files Addon](https://github.com/wp-sync-db/wp-sync-db
 
 ## Legal Notes
 
-The software that this is forked from was released under the [GPL version 2.0](https://github.com/dmhendricks/wp-sync-db/blob/master/LICENSE) copyleft license, granting freedom to copy, distribute, and/or modify this software. Due to a [DMCA takedown request](https://wptavern.com/dmca-takedown-notice-issued-against-fork-of-wp-migrate-db-pro), the original author renamed it and removed branding/trademarks and license verification code.
+The software that this is forked from was released under the [GPL version 2.0](https://github.com/dmhendricks/wp-sync-db/blob/master/LICENSE) copyleft license, granting freedom to copy, distribute, and/or modify this software. Due to a [DMCA takedown request](https://wptavern.com/dmca-takedown-notice-issued-against-fork-of-wp-migrate-db-pro), the original developer renamed it and removed branding/trademarks and license verification code.
 
 [![Analytics](https://ga-beacon.appspot.com/UA-126205765-1/dmhendricks/wp-sync-db?flat)](https://ga-beacon.appspot.com/?utm_source=github.com&utm_medium=campaign&utm_content=button&utm_campaign=dmhendricks%2Fwp-sync-db)

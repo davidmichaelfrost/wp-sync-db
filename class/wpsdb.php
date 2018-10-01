@@ -556,6 +556,8 @@ class WPSDB extends WPSDB_Base {
 		$preserved_options = apply_filters( 'wpsdb_preserved_options', $preserved_options );
 
 		foreach ( $temp_tables as $table ) {
+			if( empty( substr( $table, strlen( $temp_prefix ) ) ) ) continue;
+
 			$sql .= 'DROP TABLE IF EXISTS ' . $this->backquote( substr( $table, strlen( $temp_prefix ) ) ) . ';';
 			$sql .= "\n";
 			$sql .= 'RENAME TABLE ' . $this->backquote( $table )  . ' TO ' . $this->backquote( substr( $table, strlen( $temp_prefix ) ) ) . ';';

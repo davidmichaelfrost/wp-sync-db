@@ -5,7 +5,7 @@ Description: Export, push, and pull to migrate your WordPress databases.
 Author: Sean Lang
 Version: 1.6
 Author URI: http://slang.cx
-GitHub Plugin URI: wp-sync-db/wp-sync-db
+GitHub Plugin URI: dmhendricks/wp-sync-db
 Network: True
 */
 

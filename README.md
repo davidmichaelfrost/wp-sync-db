@@ -3,7 +3,7 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Demonstration Videos](#demonstration-videos)
-- [Legal Notes](#legal)
+- [Legal Notes](#legal-notes)
 
 :construction: :warning: This is a fork of the original [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) by [Sean Lang](http://slang.cx) ("original developer"). It is currently **under construction** and is not suitable for production use.
 
@@ -28,7 +28,7 @@ It is especially useful for syncing a local development database with a live sit
 
 1. Install WP Sync DB by downloading the latest [release](https://github.com/dmhendricks/wp-sync-db/releases).
 2. Access the WP Sync DB menu option under **WP Admin** > **Tools**.
-3. (optional) Install the [WP Sync DB Media Files](https://github.com/wp-sync-db/wp-sync-db-media-files) addon to sync media libraries.
+3. :construction: (optional) Install the [WP Sync DB Media Files](https://github.com/wp-sync-db/wp-sync-db-media-files) addon to sync media libraries.
 
 **Tip:** You can also install [GitHub Updater](https://github.com/afragen/github-updater) to enable automatic updates from this repository.
 

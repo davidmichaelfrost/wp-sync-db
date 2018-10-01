@@ -8,9 +8,20 @@
   "private": true,
   "scripts": {
     "translate": "wp-pot -s './**/*.php' -o ./languages/$npm_package_name.pot -p $npm_package_name",
-    "zip": "zip -q -r ../$npm_package_name-$npm_package_version.zip * -x 'node_modules/*' '.git*' './.*' './composer.*' './*.md' './*.yml' './*.sh' './gulpfile.js' "
+    "zip": "zip -q -r ../$npm_package_name-$npm_package_version.zip * -x 'node_modules/*' 'src/*' '.git*' './.*' './composer.*' './*.md' './*.yml' './*.sh' './gulpfile.js' "
   },
   "devDependencies": {
+    "gulp": "^4.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-line-ending-corrector": "^1.0.2",
+    "gulp-cache": "^1.0.2",
+    "gulp-notify": "^3.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "gulp-uglifycss": "^1.1.0",
     "wp-pot-cli": "1.0.0"
   },
   "repository": {

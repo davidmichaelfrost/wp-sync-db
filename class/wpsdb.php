@@ -349,15 +349,15 @@ class WPSDB extends WPSDB_Base {
 		echo home_url();
 		echo "\r\n";
 
-		echo 'Table Prefix: ';
+		echo __( 'Table Prefix:', 'wp-sync-db' ) . ' ';
 		echo $table_prefix;
 		echo "\r\n";
 
 		echo 'WordPress: ';
-		if ( is_multisite() ) echo 'WPMU'; else echo 'WP'; echo bloginfo('version');
+		echo bloginfo('version') . ' ' . ( is_multisite() ? __( 'Multisite', 'wp-sync-db' ) : '' );
 		echo "\r\n";
 
-		echo 'Web Server: ';
+		echo __( 'Web Server:', 'wp-sync-db' ) . ' ';
 		echo $_SERVER['SERVER_SOFTWARE'];
 		echo "\r\n";
 
@@ -373,51 +373,51 @@ class WPSDB extends WPSDB_Base {
 		echo empty( $wpdb->use_mysqli ) ? 'no' : 'yes';
 		echo "\r\n";
 
-		_e( 'WP Memory Limit', 'wp-app-store' ); echo ': ';
+		echo __( 'WP Memory Limit:', 'wp-sync-db' ) . ' ';
 		echo WP_MEMORY_LIMIT;
 		echo "\r\n";
 
-		echo 'WPSDB Bottleneck: ';
+		echo __( 'WPSDB Bottleneck:', 'wp-sync-db' ) . ' ';
 		echo size_format( $this->get_bottleneck() );
 		echo "\r\n";
 
 		if ( function_exists( 'ini_get' ) && $suhosin_limit = ini_get( 'suhosin.post.max_value_length' ) ) {
-			echo 'Suhosin Post Max Value Length: ';
+			echo __( 'Suhosin Post Max Value Length:', 'wp-sync-db' ) . ' ';
 			echo is_numeric( $suhosin_limit ) ? size_format( $suhosin_limit ) : $suhosin_limit;
 			echo "\r\n";
 		}
 
 		if ( function_exists( 'ini_get' ) && $suhosin_limit = ini_get( 'suhosin.request.max_value_length' ) ) {
-			echo 'Suhosin Request Max Value Length: ';
+			echo __( 'Suhosin Request Max Value Length:', 'wp-sync-db' ) . ' ';
 			echo is_numeric( $suhosin_limit ) ? size_format( $suhosin_limit ) : $suhosin_limit;
 			echo "\r\n";
 		}
 
-		echo 'Debug Mode: ';
+		echo __( 'Debug Mode:', 'wp-sync-db' ) . ' ';
 		if ( defined('WP_DEBUG') && WP_DEBUG ) { echo 'Yes'; } else { echo 'No'; }
 		echo "\r\n";
 
-		echo 'WP Max Upload Size: ';
+		echo __( 'WP Max Upload Size:', 'wp-sync-db' ) . ' ';
 		echo size_format( wp_max_upload_size() );
 		echo "\r\n";
 
-		echo 'PHP Post Max Size: ';
+		echo __( 'PHP Post Max Size:', 'wp-sync-db' ) . ' ';
 		echo size_format( $this->get_post_max_size() );
 		echo "\r\n";
 
-		echo 'PHP Time Limit: ';
+		echo __( 'PHP Time Limit:', 'wp-sync-db' ) . ' ';
 		if ( function_exists( 'ini_get' ) ) echo ini_get('max_execution_time');
 		echo "\r\n";
 
-		echo 'PHP Error Log: ';
+		echo __( 'PHP Error Log:', 'wp-sync-db' ) . ' ';
 		if ( function_exists( 'ini_get' ) ) echo ini_get('error_log');
 		echo "\r\n";
 
 		echo 'fsockopen: ';
 		if ( function_exists( 'fsockopen' ) ) {
-			echo 'Enabled';
+			echo __( 'Enabled', 'wp-sync-db' );
 		} else {
-			echo 'Disabled';
+			echo __( 'Disabled', 'wp-sync-db' );
 		}
 		echo "\r\n";
 
@@ -426,20 +426,20 @@ class WPSDB extends WPSDB_Base {
 			echo OPENSSL_VERSION_TEXT;
 
 		} else {
-			echo 'Disabled';
+			echo __( 'Disabled', 'wp-sync-db' );
 		}
 		echo "\r\n";
 
 		echo 'cURL: ';
 		if ( function_exists( 'curl_init' ) ) {
-			echo 'Enabled';
+			echo __( 'Enabled', 'wp-sync-db' );
 		} else {
-			echo 'Disabled';
+			echo __( 'Disabled', 'wp-sync-db' );
 		}
 		echo "\r\n";
 		echo "\r\n";
 
-		echo "Active Plugins:\r\n";
+		echo __( 'Active Plugins:', 'wp-sync-db' ) . "\r\n";
 
 		$active_plugins = (array) get_option( 'active_plugins', array() );
 

@@ -33,7 +33,7 @@ class WPSDB_Extra extends WPSDB_Base {
 	function modify_plugin_row_meta( $links, $file ) {
 
 		$row_meta = array(
-			'original_author' => sprintf( '%s: <a href="%s" aria-label="%s">%s</a>', __( 'Original Developer', 'wp-sync-db' ), 'http://slang.cx', __( 'Original developer', 'wp-sync-db' ), 'Sean Lang' )
+			'original_author' => sprintf( '%s: <a href="%s" aria-label="%s">%s</a>', __( 'Original Developer', 'wp-sync-db' ), 'http://slang.cx', __( 'Original Developer', 'wp-sync-db' ), 'Sean Lang' )
 		);
 
 		if ( $file == $this->plugin_indentifier ) {

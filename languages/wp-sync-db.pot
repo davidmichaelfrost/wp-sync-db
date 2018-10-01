@@ -65,6 +65,10 @@ msgstr ""
 msgid "Access denied for: %s"
 msgstr ""
 
+#: ../class/wpsdb-extra.php:36, ../class/wpsdb-extra.php:36
+msgid "Original Developer"
+msgstr ""
+
 #: ../class/wpsdb.php:193, ../class/wpsdb.php:197, ../class/wpsdb.php:202
 msgstr ""
 

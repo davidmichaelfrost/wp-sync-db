@@ -1,17 +1,24 @@
 <?php
-/*
-Plugin Name: WP Sync DB
-Description: Export, push, and pull to migrate your WordPress databases.
-Author: Sean Lang
-Version: 1.6
-Author URI: http://slang.cx
-GitHub Plugin URI: dmhendricks/wp-sync-db
-Network: True
-*/
+/**
+ * Plugin Name:         WP Sync DB
+ * Plugin URI:          https://wp-sync-db.github.io/
+ * Description:         Sync database data between WordPress instances
+ * Version:             1.6
+ * Author:              Daniel M. Hendricks
+ * Author URI:          https://www.danhendricks.com
+ * License:             GPL-2.0 or Later
+ * License URI:         https://opensource.org/licenses/GPL-2.0
+ * Text Domain:         wp-sync-db
+ * Domain Path:         languages
+ * Network:             True
+ * GitHub Plugin URI:   dmhendricks/wp-sync-db
+ */
 
 $GLOBALS['wpsdb_meta']['wp-sync-db']['version'] = '1.6';
 $GLOBALS['wpsdb_meta']['wp-sync-db']['folder'] = basename( plugin_dir_path( __FILE__ ) );
-$GLOBALS['wpsdb_config']['wp_admin_path'] = defined('WP_ADMIN_DIR') ? WP_ADMIN_DIR : 'wp-admin';
+$GLOBALS['wpsdb_config'] = [
+  'wp_admin_path' => defined( 'WP_ADMIN_DIR' ) ? WP_ADMIN_DIR : 'wp-admin'
+];
 
 // Define the directory seperator if it isn't already
 if( !defined( 'DS' ) ) {
@@ -29,10 +36,12 @@ function wp_sync_db_loaded() {
 
   require_once 'class/wpsdb-base.php';
   require_once 'class/wpsdb-addon.php';
+  require_once 'class/wpsdb-extra.php';
   require_once 'class/wpsdb.php';
 
   global $wpsdb;
   $wpsdb = new WPSDB( __FILE__ );
+  new WPSDB_Extra( __FILE__ );
 }
 
 add_action( 'plugins_loaded', 'wp_sync_db_loaded' );

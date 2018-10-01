@@ -3,7 +3,7 @@
   "type": "wordpress-plugin",
   "homepage": "https://github.com/dmhendricks/wp-sync-db/",
   "license": "GPL-2.0-or-later",
-  "description": "Migrate database data between different WordPress instances.",
+  "description": "Migrate database data between WordPress instances",
   "keywords": [ "plugin", "wordpress", "wp-sync-db", "database", "sync"],
   "support": {
     "issues": "https://github.com/dmhendricks/wp-sync-db/issues",

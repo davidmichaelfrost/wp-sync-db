@@ -1,6 +1,6 @@
 {
   "name": "wp-sync-db",
-  "description": "Migrate database data between different WordPress instances",
+  "description": "Migrate database data between WordPress instances",
   "version": "1.6.0",
   "author": "Daniel M. Hendricks",
   "license": "GPL-2.0-or-later",

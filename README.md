@@ -15,7 +15,7 @@ It is especially useful for syncing a local development database with a live sit
 
 :pushpin: **Composer:** I will add to Packagist once I am closer to making a release.
 
-![Screenshot](https://rawcdn.githack.com/slang800/psychic-ninja/master/wp-migrate-db.png "Screenshot")
+![Screenshot](https://rawcdn.githack.com/dmhendricks/wp-sync-db/master/asset/images/screenshot1.png "Screenshot")
 
 ## Features
 

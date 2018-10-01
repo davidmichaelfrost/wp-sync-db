@@ -176,8 +176,12 @@ msgstr ""
 msgid "The connection succeeded but the remote site is configured to reject %s connections. You can change this in the \"settings\" tab on the remote site. (#122) <a href=\"#\" class=\"try-again js-action-link\">Try again?</a>"
 msgstr ""
 
+#: ../class/wpsdb.php:1324, ../class/wpsdb.php:2176, ../class/wpsdb.php:2176, ../class/wpsdb.php:2181, ../class/wpsdb.php:2181
+msgid "WP Sync DB"
+msgstr ""
+
 #: ../class/wpsdb.php:1326
-msgid "Migrate"
+msgid "Sync"
 msgstr ""
 
 #: ../class/wpsdb.php:1326
@@ -273,15 +277,15 @@ msgid "An error occurred when trying to update the debug log. Please contact sup
 msgstr ""
 
 #: ../class/wpsdb.php:2238
-msgid "Migrate DB & Save"
+msgid "Sync DB & Save"
 msgstr ""
 
 #: ../class/wpsdb.php:2239
-msgid "Migrate DB"
+msgid "Sync DB"
 msgstr ""
 
 #: ../class/wpsdb.php:2240
-msgid "Please select at least one table to migrate."
+msgid "Please select at least one table to sync."
 msgstr ""
 
 #: ../class/wpsdb.php:2241
@@ -470,11 +474,15 @@ msgstr ""
 msgid "Migration cancelled"
 msgstr ""
 
-#: ../class/wpsdb.php:2320
+#: ../class/wpsdb.php:2287
+msgid "Sync database data between WordPress instances"
+msgstr ""
+
+#: ../class/wpsdb.php:2321
 msgid "Could not find the file to download:"
 msgstr ""
 
-#: ../class/wpsdb.php:2503
+#: ../class/wpsdb.php:2504
 msgid "MySQL export file not found."
 msgstr ""
 
@@ -531,7 +539,7 @@ msgid "Videos"
 msgstr ""
 
 #: ../template/migrate-progress.php:4
-msgid "Please wait while migration is running..."
+msgid "Please wait while the sync is running..."
 msgstr ""
 
 #: ../template/migrate-progress.php:7
@@ -623,11 +631,11 @@ msgid "<strong>New File Path Missing</strong> &mdash; Please enter the root file
 msgstr ""
 
 #: ../template/migrate.php:244
-msgid "Migrate all tables with prefix"
+msgid "Sync all tables with prefix"
 msgstr ""
 
 #: ../template/migrate.php:250
-msgid "Migrate only selected tables below"
+msgid "Sync only selected tables below"
 msgstr ""
 
 #: ../template/migrate.php:268, ../template/migrate.php:296, ../template/migrate.php:391, ../template/settings.php:68
@@ -655,7 +663,7 @@ msgid "Replace GUIDs"
 msgstr ""
 
 #: ../template/migrate.php:323
-msgid "Although the <a href=\"%s\" target=\"_blank\">WordPress Codex emphasizes</a> that GUIDs should not be changed, this is limited to sites that are already live. If the site has never been live, I recommend replacing the GUIDs. For example, you may be developing a new site locally at dev.somedomain.com and want to migrate the site live to somedomain.com."
+msgid "Although the <a href=\"%s\" target=\"_blank\">WordPress Codex emphasizes</a> that GUIDs should not be changed, this is limited to sites that are already live. If the site has never been live, I recommend replacing the GUIDs. For example, you may be developing a new site locally at dev.somedomain.com and want to sync the site live to somedomain.com."
 msgstr ""
 
 #: ../template/migrate.php:329
@@ -663,7 +671,7 @@ msgid "Exclude spam comments"
 msgstr ""
 
 #: ../template/migrate.php:335
-msgid "Do not migrate the 'active_plugins' setting (i.e. which plugins are activated/deactivated)"
+msgid "Do not sync the 'active_plugins' setting (i.e. which plugins are activated/deactivated)"
 msgstr ""
 
 #: ../template/migrate.php:352
@@ -707,31 +715,31 @@ msgid "Warning: Different Table Prefixes"
 msgstr ""
 
 #: ../template/migrate.php:436
-msgid "Whoa! We've detected that the database table prefix differs between installations. Clicking the Migrate DB button below will create new database tables in your local database with prefix \"<span class=\"remote-prefix\"></span>\"."
+msgid "Whoa! We've detected that the database table prefix differs between installations. Clicking the Sync DB button below will create new database tables in your local database with prefix \"<span class=\"remote-prefix\"></span>\"."
 msgstr ""
 
 #: ../template/migrate.php:438
-msgid "However, your local install is configured to use table prefix \"%1$s\" and will ignore the migrated tables. So, <b>AFTER</b> migration is complete, you will need to edit your local install's wp-config.php and change the \"%1$s\" variable to \"<span class=\"remote-prefix\"></span>\"."
+msgid "However, your local install is configured to use table prefix \"%1$s\" and will ignore the synced tables. So, <b>AFTER</b> the sync is complete, you will need to edit your local install's wp-config.php and change the \"%1$s\" variable to \"<span class=\"remote-prefix\"></span>\"."
 msgstr ""
 
 #: ../template/migrate.php:440
-msgid "This will allow your local install the use the migrated tables. Once you do this, you shouldn't have to do it again."
+msgid "This will allow your local install the use the synced tables. Once you do this, you shouldn't have to do it again."
 msgstr ""
 
 #: ../template/migrate.php:446
-msgid "Whoa! We've detected that the database table prefix differs between installations. Clicking the Migrate DB button below will create new database tables in the remote database with prefix \"%s\"."
+msgid "Whoa! We've detected that the database table prefix differs between installations. Clicking the Sync DB button below will create new database tables in the remote database with prefix \"%s\"."
 msgstr ""
 
 #: ../template/migrate.php:448
-msgid "However, your remote install is configured to use table prefix \"<span class=\"remote-prefix\"></span>\" and will ignore the migrated tables. So, <b>AFTER</b> migration is complete, you will need to edit your remote install's wp-config.php and change the \"<span class=\"remote-prefix\"></span>\" variable to \"%s\"."
+msgid "However, your remote install is configured to use table prefix \"<span class=\"remote-prefix\"></span>\" and will ignore the synced tables. So, <b>AFTER</b> migration is complete, you will need to edit your remote install's wp-config.php and change the \"<span class=\"remote-prefix\"></span>\" variable to \"%s\"."
 msgstr ""
 
 #: ../template/migrate.php:450
-msgid "This will allow your remote install the use the migrated tables. Once you do this, you shouldn't have to do it again."
+msgid "This will allow your remote install the use the synced tables. Once you do this, you shouldn't have to do it again."
 msgstr ""
 
 #: ../template/profile.php:2
-msgid "Would you like to use a saved migration profile?"
+msgid "Would you like to use a saved sync profile?"
 msgstr ""
 
 #: ../template/profile.php:7

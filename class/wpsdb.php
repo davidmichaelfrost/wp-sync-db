@@ -1321,9 +1321,9 @@ class WPSDB extends WPSDB_Base {
 
 		<div class="wrap wpsdb">
 
-			<div id="icon-tools" class="icon32"><br /></div><h2>Migrate DB</h2>
+			<div id="icon-tools" class="icon32"><br /></div><h2><?php _e( 'WP Sync DB', 'wp-sync-db' ); ?></h2>
 
-			<h2 class="nav-tab-wrapper"><a href="#" class="nav-tab nav-tab-active js-action-link migrate" data-div-name="migrate-tab"><?php _e( 'Migrate', 'wp-sync-db' ); ?></a><a href="#" class="nav-tab js-action-link settings" data-div-name="settings-tab"><?php _e( 'Settings', 'wp-sync-db' ); ?></a><a href="#" class="nav-tab js-action-link help" data-div-name="help-tab"><?php _e( 'Help', 'wp-sync-db' ); ?></a></h2>
+			<h2 class="nav-tab-wrapper"><a href="#" class="nav-tab nav-tab-active js-action-link migrate" data-div-name="migrate-tab"><?php _e( 'Sync', 'wp-sync-db' ); ?></a><a href="#" class="nav-tab js-action-link settings" data-div-name="settings-tab"><?php _e( 'Settings', 'wp-sync-db' ); ?></a><a href="#" class="nav-tab js-action-link help" data-div-name="help-tab"><?php _e( 'Help', 'wp-sync-db' ); ?></a></h2>
 
 			<?php do_action( 'wpsdb_notices' ); ?>
 
@@ -2173,12 +2173,12 @@ class WPSDB extends WPSDB_Base {
 	}
 
 	function network_admin_menu() {
-		$hook_suffix = add_submenu_page( 'settings.php', 'Migrate DB', 'Migrate DB', 'manage_network_options', 'wp-sync-db', array( $this, 'options_page' ) );
+		$hook_suffix = add_submenu_page( 'settings.php', __( 'WP Sync DB', 'wp-sync-db' ), __( 'WP Sync DB', 'wp-sync-db' ), 'manage_network_options', 'wp-sync-db', array( $this, 'options_page' ) );
 		$this->after_admin_menu( $hook_suffix );
 	}
 
 	function admin_menu() {
-		$hook_suffix = add_management_page( 'Migrate DB', 'Migrate DB', 'export', 'wp-sync-db', array( $this, 'options_page' ) );
+		$hook_suffix = add_management_page( __( 'WP Sync DB', 'wp-sync-db' ), __( 'WP Sync DB', 'wp-sync-db' ), 'export', 'wp-sync-db', array( $this, 'options_page' ) );
 		$this->after_admin_menu( $hook_suffix );
 	}
 
@@ -2230,60 +2230,61 @@ class WPSDB extends WPSDB_Base {
 		wp_enqueue_script( 'wp-sync-db-script', $src, array( 'jquery' ), $version, true );
 
 		wp_localize_script( 'wp-sync-db-script', 'wpsdb_i10n', array(
-			'max_request_size_problem'				=> __( "A problem occurred when trying to change the maximum request size, please try again.", 'wp-sync-db' ),
-			'establishing_remote_connection'		=> __( "Establishing connection to remote server, please wait", 'wp-sync-db' ),
-			'connection_local_server_problem'		=> __( "A problem occurred when attempting to connect to the local server, please check the details and try again.", 'wp-sync-db' ),
-			'clear_log_problem'						=> __( "An error occurred when trying to clear the debug log. Please contact support. (#132)", 'wp-sync-db' ),
-			'update_log_problem'					=> __( "An error occurred when trying to update the debug log. Please contact support. (#133)", 'wp-sync-db' ),
-			'migrate_db_save'						=> __( "Migrate DB & Save", 'wp-sync-db' ),
-			'migrate_db'							=> __( "Migrate DB", 'wp-sync-db' ),
-			'please_select_one_table'				=> __( "Please select at least one table to migrate.", 'wp-sync-db' ),
-			'enter_name_for_profile'				=> __( "Please enter a name for your migration profile.", 'wp-sync-db' ),
-			'save_profile_problem'					=> __( "An error occurred when attempting to save the migration profile. Please see the Help tab for details on how to request support. (#118)", 'wp-sync-db' ),
-			'exporting_complete'					=> __( "Exporting complete", 'wp-sync-db' ),
-			'exporting_please_wait'					=> __( "Exporting, please wait...", 'wp-sync-db' ),
-			'please_wait'							=> __( "please wait...", 'wp-sync-db' ),
-			'complete'								=> __( "complete", 'wp-sync-db' ),
-			'migration_failed'						=> __( "Migration failed", 'wp-sync-db' ),
-			'backing_up'							=> __( "Backing up", 'wp-sync-db' ),
-			'migrating'								=> __( "Migrating", 'wp-sync-db' ),
-			'status'								=> __( "Status", 'wp-sync-db' ),
-			'response'								=> __( "Response", 'wp-sync-db' ),
-			'table_process_problem'					=> __( "A problem occurred when attempting to process the following table (#113)", 'wp-sync-db' ),
-			'table_process_problem_empty_response'	=> __( "A problem occurred when processing the following table. We were expecting a response in JSON format but instead received an empty response.", 'wp-sync-db' ),
-			'completed_with_some_errors'			=> __( "Migration completed with some errors", 'wp-sync-db' ),
-			'completed_dump_located_at'				=> __( "Migration complete, your backup is located at:", 'wp-sync-db' ),
-			'finalize_tables_problem'				=> __( "A problem occurred when finalizing the backup. (#132)", 'wp-sync-db' ),
-			'saved'									=> __( "Saved", 'wp-sync-db' ),
-			'reset_api_key'							=> __( "Any sites setup to use the current API key will no longer be able to connect. You will need to update those sites with the newly generated API key. Do you wish to continue?", 'wp-sync-db' ),
-			'reset_api_key_problem'					=> __( "An error occurred when trying to generate the API key. Please see the Help tab for details on how to request support. (#105)", 'wp-sync-db' ),
-			'remove_profile'						=> __( "You are removing the following migration profile. This cannot be undone. Do you wish to continue?", 'wp-sync-db' ),
-			'remove_profile_problem'				=> __( "An error occurred when trying to delete the profile. Please see the Help tab for details on how to request support. (#106)", 'wp-sync-db' ),
-			'remove_profile_not_found'				=> __( "The selected migration profile could not be deleted because it was not found.\nPlease refresh this page to see an accurate list of the currently available migration profiles.", 'wp-sync-db' ),
-			'change_connection_info'				=> __( "If you change the connection details, you will lose any replaces and table selections you have made below. Do you wish to continue?", 'wp-sync-db' ),
-			'enter_connection_info'					=> __( "Please enter the connection information above to continue.", 'wp-sync-db' ),
-			'save_settings_problem'					=> __( "An error occurred when trying to save the settings. Please try again. If the problem persists, please see the Help tab for details on how to request support. (#108)", 'wp-sync-db' ),
-			'connection_info_missing'				=> __( "The connection information appears to be missing, please enter it to continue.", 'wp-sync-db' ),
-			'connection_info_incorrect'				=> __( "The connection information appears to be incorrect, it should consist of two lines. The first being the remote server's URL and the second being the secret key.", 'wp-sync-db' ),
-			'connection_info_url_invalid'			=> __( "The URL on the first line appears to be invalid, please check it and try again.", 'wp-sync-db' ),
-			'connection_info_key_invalid'			=> __( "The secret key on the second line appears to be invalid. It should be a 32 character string that consists of letters, numbers and special characters only.", 'wp-sync-db' ),
-			'connection_info_local_url'				=> __( "It appears you've entered the URL for this website, you need to provide the URL of the remote website instead.", 'wp-sync-db' ),
-			'connection_info_local_key'				=> __( "It appears you've entered the secret key for this website, you need to provide the secret key for the remote website instead.", 'wp-sync-db' ),
-			'time_elapsed'							=> __( "Time Elapsed:", 'wp-sync-db' ),
-			'pause'									=> __( "Pause", 'wp-sync-db' ),
-			'migration_paused'						=> __( "Migration Paused", 'wp-sync-db' ),
-			'resume'								=> __( "Resume", 'wp-sync-db' ),
-			'completing_current_request'			=> __( "Completing current request", 'wp-sync-db' ),
-			'cancelling_migration'					=> __( "Cancelling migration", 'wp-sync-db' ),
-			'paused'								=> __( "Paused", 'wp-sync-db' ),
-			'removing_local_sql'					=> __( "Removing the local MySQL export file", 'wp-sync-db' ),
-			'removing_local_backup'					=> __( "Removing the local backup MySQL export file", 'wp-sync-db' ),
-			'removing_local_temp_tables'			=> __( "Removing the local temporary tables", 'wp-sync-db' ),
-			'removing_remote_sql'					=> __( "Removing the remote backup MySQL export file", 'wp-sync-db' ),
-			'removing_remote_temp_tables'			=> __( "Removing the remote temporary tables", 'wp-sync-db' ),
-			'migration_cancellation_failed'			=> __( "Migration cancellation failed", 'wp-sync-db' ),
-			'manually_remove_temp_files'			=> __( "A problem occurred while cancelling the migration, you may have to manually delete some temporary files / tables.", 'wp-sync-db' ),
-			'migration_cancelled'					=> __( "Migration cancelled", 'wp-sync-db' ),
+			'max_request_size_problem'              => __( "A problem occurred when trying to change the maximum request size, please try again.", 'wp-sync-db' ),
+			'establishing_remote_connection'        => __( "Establishing connection to remote server, please wait", 'wp-sync-db' ),
+			'connection_local_server_problem'       => __( "A problem occurred when attempting to connect to the local server, please check the details and try again.", 'wp-sync-db' ),
+			'clear_log_problem'                     => __( "An error occurred when trying to clear the debug log. Please contact support. (#132)", 'wp-sync-db' ),
+			'update_log_problem'                    => __( "An error occurred when trying to update the debug log. Please contact support. (#133)", 'wp-sync-db' ),
+			'migrate_db_save'                       => __( "Sync DB & Save", 'wp-sync-db' ),
+			'migrate_db'                            => __( "Sync DB", 'wp-sync-db' ),
+			'please_select_one_table'               => __( "Please select at least one table to sync.", 'wp-sync-db' ),
+			'enter_name_for_profile'                => __( "Please enter a name for your migration profile.", 'wp-sync-db' ),
+			'save_profile_problem'                  => __( "An error occurred when attempting to save the migration profile. Please see the Help tab for details on how to request support. (#118)", 'wp-sync-db' ),
+			'exporting_complete'                    => __( "Exporting complete", 'wp-sync-db' ),
+			'exporting_please_wait'                 => __( "Exporting, please wait...", 'wp-sync-db' ),
+			'please_wait'                           => __( "please wait...", 'wp-sync-db' ),
+			'complete'                              => __( "complete", 'wp-sync-db' ),
+			'migration_failed'                      => __( "Migration failed", 'wp-sync-db' ),
+			'backing_up'                            => __( "Backing up", 'wp-sync-db' ),
+			'migrating'                             => __( "Migrating", 'wp-sync-db' ),
+			'status'                                => __( "Status", 'wp-sync-db' ),
+			'response'                              => __( "Response", 'wp-sync-db' ),
+			'table_process_problem'                 => __( "A problem occurred when attempting to process the following table (#113)", 'wp-sync-db' ),
+			'table_process_problem_empty_response'  => __( "A problem occurred when processing the following table. We were expecting a response in JSON format but instead received an empty response.", 'wp-sync-db' ),
+			'completed_with_some_errors'            => __( "Migration completed with some errors", 'wp-sync-db' ),
+			'completed_dump_located_at'             => __( "Migration complete, your backup is located at:", 'wp-sync-db' ),
+			'finalize_tables_problem'               => __( "A problem occurred when finalizing the backup. (#132)", 'wp-sync-db' ),
+			'saved'                                 => __( "Saved", 'wp-sync-db' ),
+			'reset_api_key'                         => __( "Any sites setup to use the current API key will no longer be able to connect. You will need to update those sites with the newly generated API key. Do you wish to continue?", 'wp-sync-db' ),
+			'reset_api_key_problem'                 => __( "An error occurred when trying to generate the API key. Please see the Help tab for details on how to request support. (#105)", 'wp-sync-db' ),
+			'remove_profile'                        => __( "You are removing the following migration profile. This cannot be undone. Do you wish to continue?", 'wp-sync-db' ),
+			'remove_profile_problem'                => __( "An error occurred when trying to delete the profile. Please see the Help tab for details on how to request support. (#106)", 'wp-sync-db' ),
+			'remove_profile_not_found'              => __( "The selected migration profile could not be deleted because it was not found.\nPlease refresh this page to see an accurate list of the currently available migration profiles.", 'wp-sync-db' ),
+			'change_connection_info'                => __( "If you change the connection details, you will lose any replaces and table selections you have made below. Do you wish to continue?", 'wp-sync-db' ),
+			'enter_connection_info'                 => __( "Please enter the connection information above to continue.", 'wp-sync-db' ),
+			'save_settings_problem'                 => __( "An error occurred when trying to save the settings. Please try again. If the problem persists, please see the Help tab for details on how to request support. (#108)", 'wp-sync-db' ),
+			'connection_info_missing'               => __( "The connection information appears to be missing, please enter it to continue.", 'wp-sync-db' ),
+			'connection_info_incorrect'             => __( "The connection information appears to be incorrect, it should consist of two lines. The first being the remote server's URL and the second being the secret key.", 'wp-sync-db' ),
+			'connection_info_url_invalid'           => __( "The URL on the first line appears to be invalid, please check it and try again.", 'wp-sync-db' ),
+			'connection_info_key_invalid'           => __( "The secret key on the second line appears to be invalid. It should be a 32 character string that consists of letters, numbers and special characters only.", 'wp-sync-db' ),
+			'connection_info_local_url'             => __( "It appears you've entered the URL for this website, you need to provide the URL of the remote website instead.", 'wp-sync-db' ),
+			'connection_info_local_key'             => __( "It appears you've entered the secret key for this website, you need to provide the secret key for the remote website instead.", 'wp-sync-db' ),
+			'time_elapsed'                          => __( "Time Elapsed:", 'wp-sync-db' ),
+			'pause'                                 => __( "Pause", 'wp-sync-db' ),
+			'migration_paused'                      => __( "Migration Paused", 'wp-sync-db' ),
+			'resume'                                => __( "Resume", 'wp-sync-db' ),
+			'completing_current_request'            => __( "Completing current request", 'wp-sync-db' ),
+			'cancelling_migration'                  => __( "Cancelling migration", 'wp-sync-db' ),
+			'paused'                                => __( "Paused", 'wp-sync-db' ),
+			'removing_local_sql'                    => __( "Removing the local MySQL export file", 'wp-sync-db' ),
+			'removing_local_backup'                 => __( "Removing the local backup MySQL export file", 'wp-sync-db' ),
+			'removing_local_temp_tables'            => __( "Removing the local temporary tables", 'wp-sync-db' ),
+			'removing_remote_sql'                   => __( "Removing the remote backup MySQL export file", 'wp-sync-db' ),
+			'removing_remote_temp_tables'           => __( "Removing the remote temporary tables", 'wp-sync-db' ),
+			'migration_cancellation_failed'         => __( "Migration cancellation failed", 'wp-sync-db' ),
+			'manually_remove_temp_files'            => __( "A problem occurred while cancelling the migration, you may have to manually delete some temporary files / tables.", 'wp-sync-db' ),
+			'migration_cancelled'                   => __( "Migration cancelled", 'wp-sync-db' ),
+			'plugin_description'                    => __( "Sync database data between WordPress instances", 'wp-sync-db' )
 		) );
 
 		wp_enqueue_script('jquery');

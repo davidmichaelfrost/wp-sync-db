@@ -11,7 +11,7 @@ WP Sync DB eliminates the manual work of migrating a WP database by exporting yo
 
 It is especially useful for syncing a local development database with a live site.
 
-:pushpin: **Help Wanted - Translations:** If you know of any quality translations or are able to [translate strings](https://github.com/dmhendricks/wp-sync-db/blob/master/languages/wp-sync-db-en.pot) from another language, please let me know. If you don't have or know how to use Poedit, no problem - You can simply translate in a text file and I will create the translation files.
+:pushpin: **Help Wanted - Translations:** If you know of any quality translations or are able to [translate strings](https://github.com/dmhendricks/wp-sync-db/blob/master/languages/wp-sync-db.pot) from another language, please let me know. If you don't have or know how to use Poedit, no problem - You can simply translate in a text file and I will create the translation files.
 
 :pushpin: **Composer:** I will add to Packagist once I am closer to making a release.
 

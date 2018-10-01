@@ -637,7 +637,7 @@
   position: absolute;
 }
 .wpsdb .settings-tab .option-section .ajax-success-msg {
-  right: -42px;
+  right: -52px;
   left: inherit;
   top: 0px;
   position: absolute;
@@ -647,7 +647,7 @@
   right: -45px;
 }
 .wpsdb .settings-tab .option-section .bubble .ajax-success-msg {
-  right: -65px;
+  right: -75px;
 }
 .wpsdb .allow-remote-reqeusts {
   font-size: 14px;

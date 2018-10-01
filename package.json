@@ -1,0 +1,23 @@
+{
+  "name": "wp-sync-db",
+  "description": "Migrate database data between different WordPress instances",
+  "version": "1.6.0",
+  "author": "Daniel M. Hendricks",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://github.com/dmhendricks/wp-sync-db",
+  "private": true,
+  "scripts": {
+    "translate": "wp-pot -s './**/*.php' -o ./languages/$npm_package_name.pot -p $npm_package_name",
+    "zip": "zip -q -r ../$npm_package_name-$npm_package_version.zip * -x 'node_modules/*' '.git*' './.*' './composer.*' './*.md' './*.yml' './*.sh' './gulpfile.js' "
+  },
+  "devDependencies": {
+    "wp-pot-cli": "1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmhendricks/wp-sync-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dmhendricks/wp-sync-db/issues"
+  }
+}

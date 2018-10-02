@@ -1,13 +1,13 @@
 {
-  "name": "dmhendricks/wp-sync-db",
+  "name": "cloudverve/wp-sync-db",
   "type": "wordpress-plugin",
-  "homepage": "https://github.com/dmhendricks/wp-sync-db/",
+  "homepage": "https://github.com/cloudverve/wp-sync-db/",
   "license": "GPL-2.0-or-later",
   "description": "Migrate database data between WordPress instances",
   "keywords": [ "plugin", "wordpress", "wp-sync-db", "database", "sync"],
   "support": {
-    "issues": "https://github.com/dmhendricks/wp-sync-db/issues",
-    "source": "https://github.com/dmhendricks/wp-sync-db/"
+    "issues": "https://github.com/cloudverve/wp-sync-db/issues",
+    "source": "https://github.com/cloudverve/wp-sync-db/"
   },
   "require": {
     "composer/installers": "^1.0.6"

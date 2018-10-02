@@ -3,7 +3,7 @@
  *
  * @author Daniel M. Hendricks
  * @license GPL-2.0-or-later
- * {@link https://github.com/dmhendricks/wp-sync-db GitHub repository}
+ * {@link https://github.com/cloudverve/wp-sync-db GitHub repository}
  */
 
 var pkg           = require( './package.json' );

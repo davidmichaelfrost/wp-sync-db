@@ -4,7 +4,7 @@
   "version": "1.6.0",
   "author": "Daniel M. Hendricks",
   "license": "GPL-2.0-or-later",
-  "homepage": "https://github.com/dmhendricks/wp-sync-db",
+  "homepage": "https://github.com/cloudverve/wp-sync-db",
   "private": true,
   "scripts": {
     "translate": "wp-pot -s './**/*.php' -o ./languages/$npm_package_name.pot -p $npm_package_name",
@@ -26,9 +26,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dmhendricks/wp-sync-db.git"
+    "url": "git+https://github.com/cloudverve/wp-sync-db.git"
   },
   "bugs": {
-    "url": "https://github.com/dmhendricks/wp-sync-db/issues"
+    "url": "https://github.com/cloudverve/wp-sync-db/issues"
   }
 }

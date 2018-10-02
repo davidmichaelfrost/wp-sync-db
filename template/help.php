@@ -23,7 +23,7 @@ $videos = array(
 	<div class="support">
 		<h3><?php _e( 'Support', 'wp-sync-db' ); ?></h3>
 		<p>
-			<?php printf( __( 'Please report bugs or ask questions in the <a href="%s">GitHub Issue Tracker</a>.', 'wp-sync-db' ), 'https://github.com/dmhendricks/wp-sync-db/issues' ); ?>
+			<?php printf( __( 'Please report bugs or ask questions in the <a href="%s">GitHub Issue Tracker</a>.', 'wp-sync-db' ), 'https://github.com/cloudverve/wp-sync-db/issues' ); ?>
 		</p>
 	</div>
 	<div class="debug">

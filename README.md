@@ -11,13 +11,13 @@ WP Sync DB eliminates the manual work of migrating a WP database by exporting yo
 
 It is especially useful for syncing a local development database with a live site.
 
-### Download Installable ZIP: [wp-sync-db.zip](https://github.com/dmhendricks/wp-sync-db/releases/download/1.6.0/wp-sync-db.zip)
+### Download Installable ZIP: [wp-sync-db.zip](https://github.com/cloudverve/wp-sync-db/releases/download/1.6.0/wp-sync-db.zip)
 
-:pushpin: **Help Wanted - Translations:** If you know of any quality translations or are able to [translate strings](https://github.com/dmhendricks/wp-sync-db/blob/master/languages/wp-sync-db.pot) from another language, please let me know. If you don't have or know how to use Poedit, no problem - You can simply translate in a text file and I will create the translation files.
+:pushpin: **Help Wanted - Translations:** If you know of any quality translations or are able to [translate strings](https://github.com/cloudverve/wp-sync-db/blob/master/languages/wp-sync-db.pot) from another language, please let me know. If you don't have or know how to use Poedit, no problem - You can simply translate in a text file and I will create the translation files.
 
-:pushpin: **Composer:** I will add to Packagist once I am closer to making a release.
+:pushpin: **Composer:** This fork will be added to Packagist once it is closer to release.
 
-![Screenshot](https://rawcdn.githack.com/dmhendricks/wp-sync-db/master/asset/images/screenshot1.png "Screenshot")
+![Screenshot](https://rawcdn.githack.com/cloudverve/wp-sync-db/master/asset/images/screenshot1.png "Screenshot")
 
 ## Features
 
@@ -32,7 +32,7 @@ It is especially useful for syncing a local development database with a live sit
 
 ## Installation
 
-1. Install WP Sync DB by downloading the latest [release](https://github.com/dmhendricks/wp-sync-db/releases).
+1. Install WP Sync DB by downloading the latest [release](https://github.com/cloudverve/wp-sync-db/releases).
 2. Access the WP Sync DB menu option under **WP Admin** > **Tools**.
 3. :construction: (optional) Install the [WP Sync DB Media Files](https://github.com/wp-sync-db/wp-sync-db-media-files) addon to sync media libraries.
 
@@ -60,6 +60,6 @@ A short demo of the [Media Files Addon](https://github.com/wp-sync-db/wp-sync-db
 
 ## Legal Notes
 
-The software that this is forked from was released under the [GPL version 2.0](https://github.com/dmhendricks/wp-sync-db/blob/master/LICENSE) copyleft license, granting freedom to copy, distribute, and/or modify this software. Due to a [DMCA takedown request](https://wptavern.com/dmca-takedown-notice-issued-against-fork-of-wp-migrate-db-pro), the original developer renamed it and removed branding/trademarks and license verification code.
+The software that this is forked from was released under the [GPL version 2.0](https://github.com/cloudverve/wp-sync-db/blob/master/LICENSE) copyleft license, granting freedom to copy, distribute, and/or modify this software. Due to a [DMCA takedown request](https://wptavern.com/dmca-takedown-notice-issued-against-fork-of-wp-migrate-db-pro), the original developer renamed it and removed branding/trademarks and license verification code.
 
-[![Analytics](https://ga-beacon.appspot.com/UA-126205765-1/dmhendricks/wp-sync-db?flat)](https://ga-beacon.appspot.com/?utm_source=github.com&utm_medium=campaign&utm_content=button&utm_campaign=dmhendricks%2Fwp-sync-db)
+[![Analytics](https://ga-beacon.appspot.com/UA-126205765-1/cloudverve/wp-sync-db?flat)](https://ga-beacon.appspot.com/?utm_source=github.com&utm_medium=campaign&utm_content=button&utm_campaign=cloudverve%2Fwp-sync-db)

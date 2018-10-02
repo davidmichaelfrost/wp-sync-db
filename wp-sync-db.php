@@ -3,18 +3,17 @@
  * Plugin Name:         WP Sync DB
  * Plugin URI:          https://wp-sync-db.github.io/
  * Description:         Sync database data between WordPress instances
- * Version:             1.6
- * Author:              Daniel M. Hendricks
- * Author URI:          https://www.danhendricks.com
+ * Version:             1.6.0
+ * Author:              CloudVerve, LLC
  * License:             GPL-2.0 or Later
  * License URI:         https://opensource.org/licenses/GPL-2.0
  * Text Domain:         wp-sync-db
  * Domain Path:         languages
  * Network:             True
- * GitHub Plugin URI:   dmhendricks/wp-sync-db
+ * GitHub Plugin URI:   cloudverve/wp-sync-db
  */
 
-$GLOBALS['wpsdb_meta']['wp-sync-db']['version'] = '1.6';
+$GLOBALS['wpsdb_meta']['wp-sync-db']['version'] = '1.6.0';
 $GLOBALS['wpsdb_meta']['wp-sync-db']['folder'] = basename( plugin_dir_path( __FILE__ ) );
 $GLOBALS['wpsdb_config'] = [
   'wp_admin_path' => defined( 'WP_ADMIN_DIR' ) ? WP_ADMIN_DIR : 'wp-admin'

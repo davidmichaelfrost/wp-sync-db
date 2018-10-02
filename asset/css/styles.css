@@ -617,6 +617,7 @@
 }
 
 .wpsdb .migrate-db .ajax-success-msg {
+  color: #43A047;
   font-weight: bold;
   margin: 3px 0 0 9px;
   display: inline-block;
@@ -722,6 +723,7 @@
 }
 
 .wpsdb .settings-tab .option-section .ajax-success-msg {
+  color: #43A047;
   right: -52px;
   left: inherit;
   top: 0px;
@@ -734,6 +736,7 @@
 }
 
 .wpsdb .settings-tab .option-section .bubble .ajax-success-msg {
+  color: #43A047;
   right: -75px;
 }
 

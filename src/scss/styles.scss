@@ -644,6 +644,7 @@
 
   .migrate-db {
     .ajax-success-msg {
+      color: $color-success;
       font-weight: bold;
       margin: 3px 0 0 9px;
       display: inline-block;
@@ -751,6 +752,7 @@
       }
 
       .ajax-success-msg {
+        color: $color-success;
         right: -52px;
         left: inherit;
         top: 0px;
@@ -764,6 +766,7 @@
         }
 
         .ajax-success-msg {
+          color: $color-success;
           right: -75px;
         }
       }
@@ -990,7 +993,7 @@
 }
 
 .migration-error {
-  color: #A21B1B;
+  color: $color-danger;
   display: block;
   font-weight: bold;
   max-height: 400px;

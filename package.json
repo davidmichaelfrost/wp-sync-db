@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "translate": "wp-pot -s './**/*.php' -o ./languages/$npm_package_name.pot -p $npm_package_name",
-    "zip": "zip -q -r ../$npm_package_name-$npm_package_version.zip * -x 'node_modules/*' 'src/*' '.git*' './.*' './composer.*' './*.md' './*.yml' './*.sh' './gulpfile.js' "
+    "zip": "zip -q -r ../$npm_package_name-$npm_package_version.zip * -x 'node_modules/*' 'src/*' '.git*' './.*' './composer.*' './package*' './*.md' './*.yml' './*.sh' './gulpfile.js' "
   },
   "devDependencies": {
     "gulp": "^4.0",

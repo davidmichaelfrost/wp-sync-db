@@ -33,6 +33,7 @@ class WPSDB extends WPSDB_Base {
 			'allow_push' => false,
 			'profiles'  => array(),
 			'verify_ssl'	=> false,
+			'enable_cdn'	=> true,
 			'blacklist_plugins' => array(),
 		);
 
@@ -2215,21 +2216,15 @@ class WPSDB extends WPSDB_Base {
 
 		$version = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? time() : $this->plugin_version;
 
-		$src = $plugins_url . 'asset/css/styles.css';
+		$src = $plugins_url . 'asset/css/styles.min.css';
 		wp_enqueue_style( 'wp-sync-db-styles', $src, array(), $version );
-
-		$src = $plugins_url . 'asset/js/common.js';
-		wp_enqueue_script( 'wp-sync-db-common', $src, NULL, $version, true );
-
-		$src = $plugins_url . 'asset/js/hook.js';
-		wp_enqueue_script( 'wp-sync-db-hook', $src, NULL, $version, true );
 
 		do_action( 'wpsdb_load_assets' );
 
-		$src = $plugins_url . 'asset/js/script.js';
-		wp_enqueue_script( 'wp-sync-db-script', $src, array( 'jquery' ), $version, true );
+		$src = $plugins_url . 'asset/js/wp-sync-db.min.js';
+		wp_enqueue_script( 'wp-sync-db', $src, array( 'jquery' ), $version, true );
 
-		wp_localize_script( 'wp-sync-db-script', 'wpsdb_i10n', array(
+		wp_localize_script( 'wp-sync-db', 'wpsdb_i10n', array(
 			'max_request_size_problem'              => __( "A problem occurred when trying to change the maximum request size, please try again.", 'wp-sync-db' ),
 			'establishing_remote_connection'        => __( "Establishing connection to remote server, please wait", 'wp-sync-db' ),
 			'connection_local_server_problem'       => __( "A problem occurred when attempting to connect to the local server, please check the details and try again.", 'wp-sync-db' ),

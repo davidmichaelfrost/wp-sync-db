@@ -29,7 +29,7 @@
 					<input id="verify_ssl" type="checkbox" name="verify_ssl"<?php echo $verify_ssl_checked; ?> />
 					<?php _e( 'Enable SSL verification', 'wp-sync-db' ); ?>
 					</label>
-					<a href="#" class="general-helper replace-guid-helper js-action-link"></a>
+					<a href="#" class="general-helper js-action-link"></a>
 					<div class="ssl-verify-message helper-message">
 					<?php _e( 'We disable SSL verification by default because a lot of people\'s environments are not setup for it to work. For example, with XAMPP, you have to manually enable OpenSSL by editing the php.ini. Without SSL verification, an HTTPS connection is vulnerable to a man-in-the-middle attack, so we do recommend you configure your environment and enable this.', 'wp-sync-db' ); ?>
 					</div>

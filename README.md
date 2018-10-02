@@ -5,11 +5,13 @@
 - [Demonstration Videos](#demonstration-videos)
 - [Legal Notes](#legal-notes)
 
-:construction: :warning: This is a fork of the original [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) by [Sean Lang](http://slang.cx) ("original developer"). It is currently **under construction** and is not recommended for production use.
+This is a fork of the original [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) by [Sean Lang](http://slang.cx) ("original developer").
 
 WP Sync DB eliminates the manual work of migrating a WP database by exporting your database as a MySQL data dump (much like phpMyAdmin), doing a find and replace on URLs/file paths, and allowing you to save it to your computer or push/pull it directly to/from another WordPress instance.
 
 It is especially useful for syncing a local development database with a live site.
+
+### Download Installable ZIP: [wp-sync-db.zip](https://github.com/dmhendricks/wp-sync-db/releases/download/1.6.0/wp-sync-db.zip)
 
 :pushpin: **Help Wanted - Translations:** If you know of any quality translations or are able to [translate strings](https://github.com/dmhendricks/wp-sync-db/blob/master/languages/wp-sync-db.pot) from another language, please let me know. If you don't have or know how to use Poedit, no problem - You can simply translate in a text file and I will create the translation files.
 

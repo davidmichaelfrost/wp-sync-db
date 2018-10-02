@@ -31,16 +31,13 @@ class WPSDB_Extra extends WPSDB_Base {
 	 * Add extra links to plugin page
 	 */
 	function modify_plugin_row_meta( $links, $file ) {
+    if( $file != $this->plugin_indentifier ) return $links;
 
 		$row_meta = array(
 			'original_author' => sprintf( '%s: <a href="%s" aria-label="%s">%s</a>', __( 'Original Developer', 'wp-sync-db' ), 'http://slang.cx', __( 'Original Developer', 'wp-sync-db' ), 'Sean Lang' )
 		);
 
-		if ( $file == $this->plugin_indentifier ) {
-			$links = array_merge( $links, $row_meta );
-		}
-
-		return $links;
+		return array_merge( $links, $row_meta );
 
 	}
 

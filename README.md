@@ -2,7 +2,9 @@
 
 - [Features](#features)
 - [Installation](#installation)
+   - [Requirements](#requirements)
 - [Demonstration Videos](#demonstration-videos)
+- [Frequently Asked Questions](#frequently-asked-questions)
 - [Legal Notes](#legal-notes)
 
 This is a fork of the original [WP Sync DB](https://github.com/wp-sync-db/wp-sync-db) by [Sean Lang](http://slang.cx) ("original developer").
@@ -38,6 +40,15 @@ It is especially useful for syncing a local development database with a live sit
 
 **Tip:** You can also install [GitHub Updater](https://github.com/afragen/github-updater) to enable automatic updates from this repository.
 
+### Requirements
+
+Although this plugin may work with other configurations, the following minimum requirements are supported:
+
+- WordPress 4.7 or higher
+- PHP 5.4 or higher
+
+If you encounter a problem using these minimum requirements, please [report an issue](https://github.com/cloudverve/wp-sync-db/issues).
+
 ## Demonstration Videos
 
 #### Feature Walk-Through
@@ -57,6 +68,22 @@ It is especially useful for syncing a local development database with a live sit
 A short demo of the [Media Files Addon](https://github.com/wp-sync-db/wp-sync-db-media-files), which allows you to sync your WordPress Media Libraries.
 
 [![Media Files and CLI Addons](https://img.youtube.com/vi/0aR8-jC2XXM/0.jpg)](https://www.youtube.com/watch?v=0aR8-jC2XXM "Media Files and CLI Addons")
+
+## Frequently Asked Questions
+
+#### Is multisite supported?
+
+This is currently not officially supported.
+
+Although they lack admin interfaces, you might try [Network Sub-domain Updater](https://github.com/dmhendricks/wordpress-network-subdomain-updater-plugin) in conjunction with [Rewrite Content URLs](https://github.com/dmhendricks/wordpress-rewrite-content-urls-plugin) to assist with _manual_ migration of multisite data.
+
+If you'd prefer a wizard, a commercial alternative is [WP Migrate DB Pro](https://deliciousbrains.com/wp-migrate-db-pro/) and its [Multisite Tools Addon](https://deliciousbrains.com/wp-migrate-db-pro/doc/multisite-tools-addon/).
+
+#### Does it migrate files as well?
+
+:construction: Using the optional [Media Files Addon](https://github.com/wp-sync-db/wp-sync-db-media-files), you can sync Media Library files between instances.
+
+_Note: Due to various changes/improvements over time, support for this addon is currently in testing phase. Use at your own risk._
 
 ## Legal Notes
 

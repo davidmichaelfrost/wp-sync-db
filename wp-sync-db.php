@@ -4,7 +4,8 @@
  * Plugin URI:          https://wp-sync-db.github.io/
  * Description:         Sync database data between WordPress instances
  * Version:             1.6.0
- * Author:              CloudVerve, LLC
+ * Author:              WPSDB Contributors
+ * Author URI:          https://github.com/cloudverve/wp-sync-db/graphs/contributors
  * License:             GPL-2.0 or Later
  * License URI:         https://opensource.org/licenses/GPL-2.0
  * Text Domain:         wp-sync-db

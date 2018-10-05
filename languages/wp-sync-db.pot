@@ -479,14 +479,18 @@ msgid "Migration cancelled"
 msgstr ""
 
 #: ../class/wpsdb.php:2282
+msgid "WPSDB Contributors"
+msgstr ""
+
+#: ../class/wpsdb.php:2283
 msgid "Sync database data between WordPress instances"
 msgstr ""
 
-#: ../class/wpsdb.php:2316
+#: ../class/wpsdb.php:2317
 msgid "Could not find the file to download:"
 msgstr ""
 
-#: ../class/wpsdb.php:2499
+#: ../class/wpsdb.php:2500
 msgid "MySQL export file not found."
 msgstr ""
 

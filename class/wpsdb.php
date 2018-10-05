@@ -2279,6 +2279,7 @@ class WPSDB extends WPSDB_Base {
 			'migration_cancellation_failed'         => __( "Migration cancellation failed", 'wp-sync-db' ),
 			'manually_remove_temp_files'            => __( "A problem occurred while cancelling the migration, you may have to manually delete some temporary files / tables.", 'wp-sync-db' ),
 			'migration_cancelled'                   => __( "Migration cancelled", 'wp-sync-db' ),
+			'plugin_byline'                         => __( "WPSDB Contributors", 'wp-sync-db' ),
 			'plugin_description'                    => __( "Sync database data between WordPress instances", 'wp-sync-db' )
 		) );
 
@@ -2321,17 +2322,17 @@ class WPSDB extends WPSDB_Base {
 		global $table_prefix;
 
 		$nonces = array(
-			'update_max_request_size' 			=> wp_create_nonce( 'update-max-request-size' ),
-			'verify_connection_to_remote_site'	=> wp_create_nonce( 'verify-connection-to-remote-site' ),
-			'clear_log'							=> wp_create_nonce( 'clear-log' ),
-			'get_log'							=> wp_create_nonce( 'get-log' ),
-			'save_profile'						=> wp_create_nonce( 'save-profile' ),
-			'initiate_migration'				=> wp_create_nonce( 'initiate-migration' ),
-			'migrate_table'						=> wp_create_nonce( 'migrate-table' ),
-			'finalize_migration'				=> wp_create_nonce( 'finalize-migration' ),
-			'reset_api_key'						=> wp_create_nonce( 'reset-api-key' ),
-			'delete_migration_profile'			=> wp_create_nonce( 'delete-migration-profile' ),
-			'save_setting'						=> wp_create_nonce( 'save-setting' ),
+			'update_max_request_size'           => wp_create_nonce( 'update-max-request-size' ),
+			'verify_connection_to_remote_site'  => wp_create_nonce( 'verify-connection-to-remote-site' ),
+			'clear_log'                         => wp_create_nonce( 'clear-log' ),
+			'get_log'                           => wp_create_nonce( 'get-log' ),
+			'save_profile'                      => wp_create_nonce( 'save-profile' ),
+			'initiate_migration'                => wp_create_nonce( 'initiate-migration' ),
+			'migrate_table'                     => wp_create_nonce( 'migrate-table' ),
+			'finalize_migration'                => wp_create_nonce( 'finalize-migration' ),
+			'reset_api_key'                     => wp_create_nonce( 'reset-api-key' ),
+			'delete_migration_profile'          => wp_create_nonce( 'delete-migration-profile' ),
+			'save_setting'                      => wp_create_nonce( 'save-setting' ),
 		);
 
 		$nonces = apply_filters( 'wpsdb_nonces', $nonces );

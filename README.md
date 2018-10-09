@@ -89,4 +89,4 @@ _Note: Due to various changes/improvements over time, support for this addon is 
 
 The software that this is forked from was released under the [GPL version 2.0](https://github.com/cloudverve/wp-sync-db/blob/master/LICENSE) copyleft license, granting freedom to copy, distribute, and/or modify this software. Due to a [DMCA takedown request](https://wptavern.com/dmca-takedown-notice-issued-against-fork-of-wp-migrate-db-pro), the original developer renamed it and removed branding/trademarks and license verification code.
 
-[![Analytics](https://ga-beacon.appspot.com/UA-126205765-1/cloudverve/wp-sync-db?flat)](https://ga-beacon.appspot.com/?utm_source=github.com&utm_medium=campaign&utm_content=button&utm_campaign=cloudverve%2Fwp-sync-db)
+[![Analytics](https://ga-beacon.appspot.com/UA-67333102-2/cloudverve/wp-sync-db?flat)](https://ga-beacon.appspot.com/?utm_source=github.com&utm_medium=campaign&utm_content=button&utm_campaign=cloudverve%2Fwp-sync-db)
